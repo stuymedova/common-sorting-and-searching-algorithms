@@ -16,3 +16,8 @@ Todo:
 
 - [Linear search](./searching-algorithms/linearSearch.js)
 - [Binary search](./searching-algorithms/binarySearch.js)
+
+---
+
+See also:
+- [Common Data Structures](https://github.com/stuymedova/common-data-structures)
