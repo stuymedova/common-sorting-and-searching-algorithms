@@ -1,6 +1,8 @@
 // Binary Search
 //
 // - Complexity (Scalability): O(log(n)).
+
+
 export default function binarySearch(soughtValue, givenArray) {
 	let lowPointer = 0;
 	let highPointer = givenArray.length;

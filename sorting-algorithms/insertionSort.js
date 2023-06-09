@@ -1,8 +1,10 @@
-import swapInPlace from './utilities/swapInPlace.js';
-
 // Insertion Sort
 //
 // - Complexity (Scalability): O(n^2).
+
+
+import swapInPlace from './utilities/swapInPlace.js';
+
 export default function insertionSort(givenArray) {
 	const sortedArray = [...givenArray];
 

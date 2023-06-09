@@ -1,8 +1,10 @@
-import swapInPlace from './utilities/swapInPlace.js';
-
 // Selection Sort
 //
 // - Complexity (Scalability): O(n^2).
+
+
+import swapInPlace from './utilities/swapInPlace.js';
+
 export default function selectionSort(givenArray) {
 	const sortedArray = [...givenArray];
 
