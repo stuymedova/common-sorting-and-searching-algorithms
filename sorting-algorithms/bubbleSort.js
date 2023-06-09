@@ -1,3 +1,5 @@
+import swapInPlace from './utilities/swapInPlace.js';
+
 // Bubble Sort
 //
 // - Complexity (Scalability): O(n^2).
@@ -17,10 +19,4 @@ export default function bubbleSort(givenArray) {
  	} while (hasSwappedElements);
 
 	return sortedArray;
-}
-
-function swapInPlace(givenArray, i, j) {
-	const temporary = givenArray[i];
-	givenArray[i] = givenArray[j];
-	givenArray[j] = temporary;
 }
