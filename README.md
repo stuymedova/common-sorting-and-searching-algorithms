@@ -4,11 +4,11 @@
 
 - [Bubble sort](./sorting-algorithms/bubbleSort.js)
 - [Insertion sort](./sorting-algorithms/insertionSort.js)
+- [Selection sort](./sorting-algorithms/selectionSort.js)
+- [Quick sort](./sorting-algorithms/quickSort.js)
 
 <!-- 
 Todo:
-- Selection sort
-- Quick sort
 - Merge sort
  -->
 
