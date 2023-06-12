@@ -1,26 +1,40 @@
 // Selection Sort
 //
 // - Complexity (Scalability): O(n^2).
-
+//
+// Works by moving from the first unsorted element to the
+// end of the list to find the smallest element and swap
+// it with the first unsorted element in the list.
+//
+//   first unsorted                first unsorted                first unsorted
+//         ∨                             ∨                             ∨
+//        [5, 12, 7, 3]    ───▶    [3, ┆ 12, 7, 5]    ───▶    [3, 5, ┆ 7, 12]
+//                   ∧                          ∧                      ∧
+//            smallest unsorted          smallest unsorted      smallest unsorted
+//
+// Additional resources:
+// - https://www.youtube.com/watch?v=3hH8kTHFw2A
 
 import swapInPlace from './utilities/swapInPlace.js';
 
 export default function selectionSort(givenArray) {
-	const sortedArray = [...givenArray];
+	let firstUnsorted = 0;
 
-	for (let i = 0; i < sortedArray.length - 1; i++) {
-		let minValueIndex = i;
+	while (firstUnsorted < givenArray.length - 1) {
+		let smallestUnsorted = firstUnsorted;
 
-		for (let j = i + 1; j < sortedArray.length; j++) {
-			if (sortedArray[j] < sortedArray[minValueIndex]) {
-				minValueIndex = j;
+		for (let i = firstUnsorted + 1; i < givenArray.length; i++) {
+			if (givenArray[i] < givenArray[smallestUnsorted]) {
+				smallestUnsorted = i;
 			}
 		}
 
-		if (minValueIndex !== i) {
-			swapInPlace(sortedArray, i, minValueIndex);
+		if (smallestUnsorted !== firstUnsorted) {
+			swapInPlace(givenArray, firstUnsorted, smallestUnsorted);
 		}
+
+		firstUnsorted += 1;
 	}
 
-	return sortedArray;
+	return givenArray;
 }
