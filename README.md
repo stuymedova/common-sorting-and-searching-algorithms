@@ -6,11 +6,7 @@
 - [Insertion sort](./sorting-algorithms/insertionSort.js)
 - [Selection sort](./sorting-algorithms/selectionSort.js)
 - [Quick sort](./sorting-algorithms/quickSort.js)
-
-<!-- 
-Todo:
-- Merge sort
- -->
+- [Merge sort](./sorting-algorithms/mergeSort.js)
 
 ### Searching Algorithms
 
