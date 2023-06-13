@@ -2,7 +2,10 @@
 //
 // - Complexity (Scalability): O(n log(n)).
 //
-// Divide and conquer algorithm. Works by ...
+// Divide and conquer algorithm. Works by partitioning
+// the array in halves until there's only one element
+// left in the given half, then merging the halves
+// together in the sorted order.
 //
 // Additional resources:
 // - https://www.youtube.com/watch?v=Ns7tGNbtvV4
