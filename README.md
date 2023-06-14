@@ -2,9 +2,9 @@
 
 ### Sorting Algorithms
 
-- [Bubble sort](./sorting-algorithms/bubbleSort.js)
-- [Insertion sort](./sorting-algorithms/insertionSort.js)
 - [Selection sort](./sorting-algorithms/selectionSort.js)
+- [Insertion sort](./sorting-algorithms/insertionSort.js)
+- [Bubble sort](./sorting-algorithms/bubbleSort.js)
 - [Quick sort](./sorting-algorithms/quickSort.js)
 - [Merge sort](./sorting-algorithms/mergeSort.js)
 
