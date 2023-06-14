@@ -7,7 +7,8 @@
 // the given half, then merging the halves together in the
 // sorted order.
 //
-// Note: the implementation below is not memory efficient.
+// Note: the implementation below is more simple yet not 
+// memory efficient.
 //
 // Additional resources:
 // - https://www.youtube.com/watch?v=Ns7tGNbtvV4
