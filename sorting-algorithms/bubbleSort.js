@@ -6,9 +6,6 @@
 // sorted (the pass is made with no elements being
 // swapped).
 //
-//   [5, 12, 7]  ───▶  [5, 12, 7]  ───▶  [5, 7, 12]  ───▶  [5, 7, 12]
-//    ∧  ∧                 ∧ ⤻ ∧          ∧  ∧                  ∧  ∧
-//
 // Additional resources:
 // - https://www.youtube.com/watch?v=RT-hUXUWQ2I
 

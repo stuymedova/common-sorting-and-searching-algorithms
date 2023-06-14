@@ -7,17 +7,6 @@
 // order to the right place within the sorted portion of
 // the list. Makes one whole pass through the list.
 //
-//  sorted                      sorted                      sorted
-//    ∨  ⤺                        ∨   ⤺                       ∨
-//   [5, ┆ 12, 7, 3]   ───▶   [5, 12, ┆ 7, 3]   ───▶   [5, 7, 12, ┆ 3]   ───▶
-//         ∧                            ∧                           ∧
-//      unsorted                     unsorted                    unsorted
-//
-//               ⤺                   ⤺
-//   ───▶   [5, 7, 3, 12]   ───▶   [5, 3, 7, 12]   ───▶   [3, 5, 7, 12]
-//                 ∧                   ∧
-//              unsorted            unsorted
-//
 // Additional resources:
 // - https://www.youtube.com/watch?v=O0VbBkUvriI
 

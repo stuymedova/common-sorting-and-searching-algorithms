@@ -27,9 +27,11 @@ function _quickSort(givenArray, leftPointer, rightPointer) {
 	const pivot = givenArray[
 		leftPointer + 
 		Math.floor((rightPointer - leftPointer) / 2)];
+	console.log('pivot', pivot);
 
 	let newLeftPointer = leftPointer;
 	let newRightPointer = rightPointer;
+	console.log('left & right', newLeftPointer, newRightPointer);
 
 	while (newLeftPointer <= newRightPointer) {
 		while (givenArray[newLeftPointer] < pivot) {
@@ -39,14 +41,18 @@ function _quickSort(givenArray, leftPointer, rightPointer) {
 			newRightPointer -= 1;
 		}
 		if (newLeftPointer <= newRightPointer) {
+			console.log('swap pointers', newLeftPointer, newRightPointer);
 			swapInPlace(givenArray, newLeftPointer, newRightPointer);
 			newLeftPointer += 1;
 			newRightPointer -= 1;
 		}
 	}
 
+	console.log('break')
 	_quickSort(givenArray, leftPointer, newRightPointer);
 	_quickSort(givenArray, newLeftPointer, rightPointer);
 
 	return givenArray;
 }
+
+console.log(quickSort([5,12,7,3]))

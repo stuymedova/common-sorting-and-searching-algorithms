@@ -6,14 +6,9 @@
 // end of the list to find the smallest element and swap
 // it with the first unsorted element in the list.
 //
-//   first unsorted                first unsorted                first unsorted
-//         ∨                             ∨                             ∨
-//        [5, 12, 7, 3]    ───▶    [3, ┆ 12, 7, 5]    ───▶    [3, 5, ┆ 7, 12]
-//                   ∧                          ∧                      ∧
-//            smallest unsorted          smallest unsorted      smallest unsorted
-//
 // Additional resources:
 // - https://www.youtube.com/watch?v=3hH8kTHFw2A
+
 
 import swapInPlace from './utilities/swapInPlace.js';
 
