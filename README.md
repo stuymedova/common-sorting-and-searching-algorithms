@@ -17,3 +17,4 @@
 
 See also:
 - [Common Data Structures](https://github.com/stuymedova/common-data-structures)
+- [Common Design Patterns](https://github.com/stuymedova/common-design-patterns)
