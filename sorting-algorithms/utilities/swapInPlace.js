@@ -1,5 +1,5 @@
-export default function swapInPlace(givenArray, i, j) {
-	const temporary = givenArray[i];
+export function swapInPlace(givenArray, i, j) {
+	const temp = givenArray[i];
 	givenArray[i] = givenArray[j];
-	givenArray[j] = temporary;
+	givenArray[j] = temp;
 }

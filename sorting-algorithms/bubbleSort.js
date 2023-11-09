@@ -10,21 +10,17 @@
 // - https://www.youtube.com/watch?v=RT-hUXUWQ2I
 
 
-import swapInPlace from './utilities/swapInPlace.js';
+import { swapInPlace } from './utilities/swapInPlace.js';
 
-export default function bubbleSort(givenArray) {
-	let hasSwappedElements = false;
-
+export function bubbleSort(givenArray) {
+	let hasSwapped = false;
 	do {
-		hasSwappedElements = false;
-
+		hasSwapped = false;
 		for (let i = 0; i < givenArray.length - 1; i++) {
 			if (givenArray[i] > givenArray[i + 1]) {
 				swapInPlace(givenArray, i, i + 1);
-				hasSwappedElements = true;
+				hasSwapped = true;
 			}
 		}
- 	} while (hasSwappedElements);
-
-	return givenArray;
+	} while (hasSwapped);
 }

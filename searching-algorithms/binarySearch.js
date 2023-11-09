@@ -3,25 +3,19 @@
 // - Complexity (Scalability): O(log(n)).
 
 
-export default function binarySearch(soughtValue, givenArray) {
-	let lowPointer = 0;
-	let highPointer = givenArray.length;
-
-	while (lowPointer <= highPointer) {
-		const middlePointer = 
-			lowPointer + Math.floor((highPointer - lowPointer) / 2);
-		const middle = givenArray[middlePointer];
-
-		if (middle === soughtValue) {
+export function binarySearch(soughtValue, givenArray) {
+	let low = 0;
+	let high = givenArray.length - 1;
+	while (low <= high) {
+		const middle = low + Math.floor((high - low) / 2);
+		if (givenArray[middle] === soughtValue) {
 			return true;
 		}
-
-		if (middle < soughtValue) {
-			lowPointer = middlePointer + 1;
+		if (givenArray[middle] < soughtValue) {
+			low = middle + 1;
 		} else {
-			highPointer = middlePointer - 1;
+			high = middle - 1;
 		}
 	}
-
 	return false;
 }

@@ -13,46 +13,33 @@
 // - https://www.youtube.com/watch?v=SLauY6PpjW4
 
 
-import swapInPlace from './utilities/swapInPlace.js';
+import { getRandomInt } from './utilities/getRandomInt.js';
+import { swapInPlace } from './utilities/swapInPlace.js';
 
-export default function quickSort(givenArray) {
-	return _quickSort(givenArray, 0, givenArray.length - 1);
+export function quickSort(givenArray, left = 0, right = givenArray.length - 1) {
+	const index = partition(givenArray, left, right);
+	if (left < index - 1) {
+		quickSort(givenArray, left, index - 1);
+	}
+	if (index < right) {
+		quickSort(givenArray, index, right);
+	}
 }
 
-function _quickSort(givenArray, leftPointer, rightPointer) {
-	if (leftPointer >= rightPointer) {
-		return;
-	}
-
-	const pivot = givenArray[
-		leftPointer + 
-		Math.floor((rightPointer - leftPointer) / 2)];
-	console.log('pivot', pivot);
-
-	let newLeftPointer = leftPointer;
-	let newRightPointer = rightPointer;
-	console.log('left & right', newLeftPointer, newRightPointer);
-
-	while (newLeftPointer <= newRightPointer) {
-		while (givenArray[newLeftPointer] < pivot) {
-			newLeftPointer += 1;
+function partition(givenArray, left, right) {
+	const pivot = givenArray[getRandomInt(left, right + 1)];
+	while (left <= right) {
+		while (givenArray[left] < pivot) {
+			left += 1;
 		}
-		while (pivot < givenArray[newRightPointer]) {
-			newRightPointer -= 1;
+		while (givenArray[right] > pivot) {
+			right -= 1;
 		}
-		if (newLeftPointer <= newRightPointer) {
-			console.log('swap pointers', newLeftPointer, newRightPointer);
-			swapInPlace(givenArray, newLeftPointer, newRightPointer);
-			newLeftPointer += 1;
-			newRightPointer -= 1;
+		if (left <= right) {
+			swapInPlace(givenArray, left, right);
+			left += 1;
+			right -= 1;
 		}
 	}
-
-	console.log('break')
-	_quickSort(givenArray, leftPointer, newRightPointer);
-	_quickSort(givenArray, newLeftPointer, rightPointer);
-
-	return givenArray;
+	return left;
 }
-
-console.log(quickSort([5,12,7,3]))

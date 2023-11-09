@@ -11,11 +11,10 @@
 // - https://www.youtube.com/watch?v=O0VbBkUvriI
 
 
-import swapInPlace from './utilities/swapInPlace.js';
+import { swapInPlace } from './utilities/swapInPlace.js';
 
-export default function insertionSort(givenArray) {
+export function insertionSort(givenArray) {
 	let sortedEnd = 0;
-
 	while (sortedEnd < givenArray.length) {
 		let i = sortedEnd;
 		while (i > 0 && givenArray[i - 1] > givenArray[i]) {
@@ -24,6 +23,4 @@ export default function insertionSort(givenArray) {
 		}
 		sortedEnd += 1;
 	}
-	
-	return givenArray;
 }

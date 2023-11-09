@@ -10,26 +10,20 @@
 // - https://www.youtube.com/watch?v=3hH8kTHFw2A
 
 
-import swapInPlace from './utilities/swapInPlace.js';
+import { swapInPlace } from './utilities/swapInPlace.js';
 
-export default function selectionSort(givenArray) {
-	let firstUnsorted = 0;
-
-	while (firstUnsorted < givenArray.length - 1) {
-		let smallestUnsorted = firstUnsorted;
-
-		for (let i = firstUnsorted + 1; i < givenArray.length; i++) {
-			if (givenArray[i] < givenArray[smallestUnsorted]) {
-				smallestUnsorted = i;
+export function selectionSort(givenArray) {
+	let first = 0;
+	while (first < givenArray.length - 1) {
+		let smallest = first;
+		for (let i = first + 1; i < givenArray.length; i++) {
+			if (givenArray[i] < givenArray[smallest]) {
+				smallest = i;
 			}
 		}
-
-		if (smallestUnsorted !== firstUnsorted) {
-			swapInPlace(givenArray, firstUnsorted, smallestUnsorted);
+		if (smallest !== first) {
+			swapInPlace(givenArray, first, smallest);
 		}
-
-		firstUnsorted += 1;
+		first += 1;
 	}
-
-	return givenArray;
 }
